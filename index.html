@@ -51,10 +51,10 @@
       a {
         color: rgba(255, 255, 255, 0.55);
       }
-      button 
-      {
-        color: hex(00,00,00);
-        text-color: hex(00,ff,00);
+      button {
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        color: rgba(255, 255, 255, 0.55);
       }
     </style>
   </head>
@@ -70,15 +70,21 @@
           <br>
           <i class="fa-brands fa-youtube"></i>
           <a href="https://www.youtube.com/@Kyten13-EUW">YouTube</a>
-          <br>
-          <button onclick = 'document.getElementById("secret").textContent="the name of kyten dog is Orion";'>secret</button>
+        </p>
+        <p>
+          <button onclick ='document.getElementById("secret").textContent="the name of kyten dog is Orion";'>secret</button>
           <p id="secret"></p>
+        </p>
       </div>
     </div>
     <script>
       const canvas = document.getElementById('matrixCanvas');
       const ctx = canvas.getContext('2d');
 
+      function showSecret() {
+        document.getElementById("secret").textContent="the name of kyten's dog is Orion";
+      }
+      
       function resizeCanvas() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
